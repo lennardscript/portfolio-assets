@@ -14,7 +14,7 @@ import java.util.Optional;
 public interface AssetPriceRepository extends JpaRepository<AssetPrice, Long> {
   Optional<AssetPrice> findByAssetAndDate(Asset asset, LocalDate date);
 
-  List<AssetPrice> findByAssetInAndDataBetween(List<Asset> assets, LocalDate starDate, LocalDate endDate);
+  List<AssetPrice> findByAssetInAndDateBetween(List<Asset> assets, LocalDate starDate, LocalDate endDate);
 
   List<AssetPrice> findByDate(LocalDate date);
 
